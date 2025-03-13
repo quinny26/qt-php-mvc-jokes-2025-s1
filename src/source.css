@@ -1,17 +1,61 @@
-@import "../node_modules/tailwindcss/dist/lib.d.mts";
+@import "tailwindcss";
+
+/**
+ * check https://components.dev.screencraft.net.au for more colours
+ *
+ * Articles on OKLCH Colour Space:
+ *      https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+ *      https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+ */
 
 @theme {
     --font-display: "Satoshi", "sans-serif";
     --breakpoint-3xl: 120rem;
-    --color-avocado-100: oklch(0.99 0 0);
-    --color-avocado-200: oklch(0.98 0.04 113.22);
-    --color-avocado-300: oklch(0.94 0.11 115.03);
-    /* ... */
+
+    --colour-prussianblue-50: oklch(from #EEF9FF l c h);
+    --colour-prussianblue-100: oklch(from #DCF3FF l c h);
+    --colour-prussianblue-200: oklch(from #B2EAFF l c h);
+    --colour-prussianblue-300: oklch(from #6DDBFF l c h);
+    --colour-prussianblue-400: oklch(from #20C9FF l c h);
+    --colour-prussianblue-500: oklch(from #00B2FF l c h);
+    --colour-prussianblue-600: oklch(from #008FDF l c h);
+    --colour-prussianblue-700: oklch(from #0071B4 l c h);
+    --colour-prussianblue-800: oklch(from #006095 l c h);
+    --colour-prussianblue-900: oklch(from #004F7A l c h);
+    --colour-prussianblue-950: oklch(from #003150 l c h);
+
+}
+
+@utility text-prussianblue-* {
+        color: --value(--colour-prussianblue-*);
+}
+
+@utility bg-prussianblue-* {
+        background-color: --value(--colour-prussianblue-*);
+}
+
+@utility border-prussianblue-* {
+        border-color: --value(--colour-prussianblue-*);
+}
+
+@utility  btn {
+    @apply px-2 py-1 m-1 text-xs font-medium align-middle;
+    @apply bg-gray-200 hover:bg-gray-700;
+    @apply text-gray-700 hover:text-gray-200;
+    @apply border border-gray-400 hover:border-gray-900;
+    @apply hover:shadow-none shadow;
+    @apply rounded ;
+    @apply transition ease-in-out duration-500;
 }
 
 
-@utility btn {
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #3399aa;
+@layer components {
+    /* Button Component */
+    .btn-primary {
+        @apply btn;
+        @apply bg-prussianblue-200 hover:bg-prussianblue-700;
+        @apply text-prussianblue-700 hover:text-prussianblue-200;
+        @apply border border-prussianblue-700 hover:border-prussianblue-200;
+    }
+
 }
