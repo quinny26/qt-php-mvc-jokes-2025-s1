@@ -188,7 +188,7 @@ Project Link: https://github.com/AdyGCode/laravel-11-many-to-many-demo
 Please see the [Educational Community License](License.md) for more details.
 
 Any code based upon this project must also give the appropriate credit
-both in the source code and also on nay associated promotional, educational,
+both in the source code and also on any associated promotional, educational,
 corporate or other materials both digital and non-digital.
 
 
