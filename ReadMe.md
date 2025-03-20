@@ -8,9 +8,22 @@ Used by students at North Metropolitan TAFE for learning and assessment purposes
 
 #### Built With
 
+[![Forks][forks-shield]][forks-url]
+[![Downloads][downloads-shield]][downloads-url]
+
+[![Languages][languages-shield]][languages-url]
+[![Issues][issues-shield]][issues-url]
+
 [![PHP][Php.com]][Php-url]
+[![JS][Js.com]][Js-url]
 [![Tailwindcss][Tailwindcss.com]][Tailwindcss-url]
 [![PhpStorm][PhpStorm.com]][PhpStorm-url]
+
+
+[![Educational Community Licence][licence-shield]][licence-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Definitions
 
@@ -149,18 +162,6 @@ TODO: More details on use for use in developing basic application using this cod
   GitHub. https://github.com/erusev/parsedown
 - ...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Badges
-
-[![Forks][forks-shield]][forks-url]
-[![Downloads][downloads-shield]][downloads-url]
-
-[![Languages][languages-shield]][languages-url]
-[![Issues][issues-shield]][issues-url]
-
-[![Educational Community Licence][licence-shield]][licence-url]
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,3 +251,7 @@ corporate or other materials both digital and non-digital.
 [PhpStorm.com]: https://img.shields.io/badge/Phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white
 
 [PhpStorm-url]: https://jetbrains.com/phpstorm/
+
+[Js.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white
+
+[Js-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
