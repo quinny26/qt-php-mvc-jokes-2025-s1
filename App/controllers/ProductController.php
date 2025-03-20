@@ -133,32 +133,16 @@ class ProductController
             ]);
         }
 
+        if (isset($newProductData['price'])) {
+            $newProductData['price'] = (float)$newProductData['price'] * 100;
+        }
 
         // accept the Markdown from the form and store as HTML
         if (isset($newProductData['description'])) {
+
             $description = $newProductData['description'] ?? '';
-            // Normalize line endings to \n
-            $description = preg_replace('/\r\n|\r|\n/', "\n", $description);
-
-            // Split the Markdown content by double new lines to handle paragraphs
-            $paragraphs = preg_split('/\n{2,}/', $description);
-
-
-            $parsedown = new Parsedown();
-            // Convert each paragraph to HTML
-            $finalHtml = '';
-            foreach ($paragraphs as $paragraph) {
-                $trimmedParagraph = trim($paragraph);
-                if ($trimmedParagraph !== '') {
-                    $html = $parsedown->text($trimmedParagraph);
-                    if (!preg_match('/^<(h[1-6]|ul|ol|li|blockquote|pre|table|div|p)/i', $html)) {
-                        $finalHtml .= '<p>' . $html . '</p>';
-                    } else {
-                        $finalHtml .= $html;
-                    }
-                }
-            }
-            $newProductData['description'] = $finalHtml;
+            $markdown = htmlToMarkdown($description);
+            $newProductData['description'] = $markdown;
         }
 
 
@@ -178,6 +162,7 @@ class ProductController
             if ($value === '') {
                 $newProductData[$field] = null;
             }
+
             $values[] = ':' . $field;
         }
 
@@ -288,28 +273,8 @@ class ProductController
 
         if (isset($updateValues['description'])) {
             $description = $updateValues['description'] ?? '';
-            // Normalize line endings to \n
-            $description = preg_replace('/\r\n|\r|\n/', "\n", $description);
-
-            // Split the Markdown content by double new lines to handle paragraphs
-            $paragraphs = preg_split('/\n{2,}/', $description);
-
-
-            $parsedown = new Parsedown();
-            // Convert each paragraph to HTML
-            $finalHtml = '';
-            foreach ($paragraphs as $paragraph) {
-                $trimmedParagraph = trim($paragraph);
-                if ($trimmedParagraph !== '') {
-                    $html = $parsedown->text($trimmedParagraph);
-                    if (!preg_match('/^<(h[1-6]|ul|ol|li|blockquote|pre|table|div|p)/i', $html)) {
-                        $finalHtml .= '<p>' . $html . '</p>';
-                    } else {
-                        $finalHtml .= $html;
-                    }
-                }
-            }
-            $updateValues['description'] = $finalHtml;
+            $markdown = htmlToMarkdown($description);
+            $updateValues['description'] = $markdown;
         }
 
         // Submit to database
@@ -324,6 +289,10 @@ class ProductController
         $updateQuery = "UPDATE products SET $updateFields WHERE id = :id";
 
         $updateValues['id'] = $id;
+        if (isset($updateValues['price'])) {
+            $updateValues['price'] = (float)$updateValues['price'] * 100;
+        }
+
         $this->db->query($updateQuery, $updateValues);
 
         // Set flash message

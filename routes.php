@@ -46,3 +46,15 @@ $router->post('/features', 'FeatureController@store', ['auth']);
 $router->put('/features/{id}', 'FeatureController@update', ['auth']);
 $router->delete('/features/{id}', 'FeatureController@destroy', ['auth']);
 
+/** 
+ * Example Product Feature Routes 
+ */
+$router->get('/products', 'ProductController@index');
+$router->get('/products/create', 'ProductController@create', ['auth']);
+$router->get('/products/edit/{id}', 'ProductController@edit', ['auth']);
+$router->get('/products/search', 'ProductController@search');
+$router->get('/products/{id}', 'ProductController@show');
+
+$router->post('/products', 'ProductController@store', ['auth']);
+$router->put('/products/{id}', 'ProductController@update', ['auth']);
+$router->delete('/products/{id}', 'ProductController@destroy', ['auth']);

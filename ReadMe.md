@@ -94,6 +94,13 @@ composer update
 npm install
 ```
 
+If required, you may need to install CK Editor, Commonmark and HTML-to-Markdown using:
+
+```shell
+composer require ckeditor/ckeditor league/html-to-markdown league/commonmark
+npm install @ckeditor/ckeditor5-build-classic
+```
+
 ### Create RDBMS User & Database
 
 Create the Database, Database user password, plus tables and seed data for your chosen RDBMS.
@@ -138,6 +145,8 @@ TODO: More details on use for use in developing basic application using this cod
   without ever leaving your HTML. Tailwindcss.com. https://tailwindcss.com/
 - JetBrains (2019). PhpStorm. [online] JetBrains. Available
   at: https://www.jetbrains.com/phpstorm/.
+- erusev/parsedown: Better Markdown Parser in PHP. (2019, December 30). 
+  GitHub. https://github.com/erusev/parsedown
 - ...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

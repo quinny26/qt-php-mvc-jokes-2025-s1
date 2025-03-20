@@ -11,6 +11,9 @@
  *
  */
 
+use League\CommonMark\CommonMarkConverter;
+use League\HTMLToMarkdown\HtmlConverter;
+
 /**
  * Get the base path
  *
@@ -84,6 +87,7 @@ function inspect($value)
         inspect($value);
         die();
     }
+
     echo '</pre>';
 }
 
@@ -107,7 +111,7 @@ function dump(): void
  *
  * @return void
  */
- function dd(): void
+function dd(): void
 {
     echo "<pre class='bg-gray-100 color-black m-2 p-2 rounded shadow flex-grow text-sm'>";
     array_map(function ($x) {
@@ -140,3 +144,38 @@ function redirect($url)
     exit;
 }
 
+
+/**
+ * Convert HTML to Markdown
+ *
+ * @param string $html HTML content to convert
+ * @return string Markdown content
+ */
+if (!function_exists('htmlToMarkdown')) {
+    function htmlToMarkdown($html) {
+        $converter = new HtmlConverter([
+            'header_style' => 'atx', // This ensures # style headers
+            'strip_tags' => false,
+            'remove_nodes' => 'script style',
+        ]);
+        return $converter->convert($html);
+    }
+}
+
+/**
+ * Convert Markdown to HTML
+ *
+ * @param string $markdown Markdown content to convert
+ * @return string HTML content
+ */
+if (!function_exists('markdownToHtml')) {
+    function markdownToHtml($markdown) {
+        $config = [
+            'html_input' => 'allow', // this ensures our font colours are displayed in the submissions view
+            'allow_unsafe_links' => false,
+        ];
+
+        $converter = new GithubFlavoredMarkdownConverter($config);
+        return $converter->convert($markdown);
+    }
+}

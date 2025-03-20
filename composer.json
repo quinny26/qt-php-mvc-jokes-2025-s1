@@ -34,12 +34,16 @@
     ]
   },
   "require": {
-    "php": ">=8.3"
+    "php": ">=8.3",
+    "league/html-to-markdown": "^5.1",
+    "ckeditor/ckeditor": "^4.25",
+    "league/commonmark": "^2.6"
   },
   "autoload": {
     "psr-4": {
       "Framework\\": "Framework/",
       "App\\": "App/"
     }
+
   }
 }

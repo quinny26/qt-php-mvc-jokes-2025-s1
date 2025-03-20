@@ -30,6 +30,7 @@ if ($successMessage !== null) : ?>
         </div>
     </div>
 <?php
+Session::clear('success_message');
 endif;
 
 $errorMessage = Session::getFlashMessage('error_message');
@@ -52,4 +53,6 @@ if ($errorMessage !== null) : ?>
         </div>
     </div>
 <?php
+    Session::clear('error_message');
+
 endif;

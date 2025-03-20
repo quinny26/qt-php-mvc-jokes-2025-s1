@@ -84,7 +84,7 @@ loadPartial('navigation');
                          alt="">
                     <section class="flex-grow p-4">
                         <div class="text-gray-600 bg-gray-100 parsedown">
-                            <?= $product->description ?>
+                            <?= html_entity_decode($product->description) ?>
                         </div>
                     </section>
                     <footer class="-mx-2 bg-gray-200 text-gray-900 text-sm px-4 py-4 -mb-2 rounded-b flex-0 flex justify-between">

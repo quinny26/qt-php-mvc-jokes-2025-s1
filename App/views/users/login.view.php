@@ -51,7 +51,7 @@ loadPartial('navigation'); ?>
                 <section class="mb-4">
 
                     <button type="submit"
-                            class="w-full bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded
+                            class="w-full bg-prussianblue-500 hover:bg-prussianblue-600 text-white px-4 py-2 rounded
                                    focus:outline-none transition ease-in-out duration-500">
                         Login
                     </button>
@@ -60,7 +60,7 @@ loadPartial('navigation'); ?>
                 <section class="mb-4">
                     <p class="mt-8 text-zinc-700">
                         So you are not a member...
-                        <a class="bg-sky-900 hover:bg-sky-600 text-white px-1 pb-1 rounded
+                        <a class="bg-prussianblue-900 hover:bg-prussianblue-600 text-white px-1 pb-1 rounded
                               transition ease-in-out duration-500"
                            href="/auth/register">Register</a> now!
                     </p>

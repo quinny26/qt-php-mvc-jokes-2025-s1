@@ -22,9 +22,10 @@ loadPartial('navigation');
             <h1>Vanilla PHP MVC Demo</h1>
         </header>
 
-        <section class="my-4 p-4 flex flex-wrap gap-8 justify-start">
+        <section class="my-4 p-4  gap-8 justify-start">
             <p class="text-3xl font-light">Welcome to the XXX SaaS Vanilla MVC YYYY/SN Template App</p>
-            <p>This is a starter template for use in developing simple </p>
+            <p>This is a starter template for simple vanilla mvc based applications.</p>
+            <p>Its primary purpose is as a <strong>teaching tool</strong> and is provided with no guarantees for security and production readiness.</p>
         </section>
     </article>
 

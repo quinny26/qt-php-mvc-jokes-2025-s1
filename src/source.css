@@ -8,7 +8,6 @@
 @import url(https://fonts.bunny.net/css?family=alegreya-sans-sc:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
 @import url('https://api.fonts.coollabs.io/css2?family=Roboto&display=swap');
 
-
 /**
  * Import TailwindCSS
  */
@@ -26,7 +25,7 @@
  */
 
 @theme {
-    --font-sans:  'Roboto', "sans-serif";
+    --font-sans: 'Roboto', "sans-serif";
     --font-display: 'Alegreya Sans SC', "sans-serif";
     --breakpoint-3xl: 120rem;
 
@@ -46,19 +45,19 @@
 
 /* Define Prussian Blue for Text, Backgrounds and Borders */
 @utility text-prussianblue-* {
-        color: --value(--colour-prussianblue-*);
+    color: --value(--colour-prussianblue-*);
 }
 
 @utility bg-prussianblue-* {
-        background-color: --value(--colour-prussianblue-*);
+    background-color: --value(--colour-prussianblue-*);
 }
 
 @utility border-prussianblue-* {
-        border-color: --value(--colour-prussianblue-*);
+    border-color: --value(--colour-prussianblue-*);
 }
 
 /* Define a Default Button CSS class (.btn) for use throughout the application */
-@utility  btn {
+@utility btn {
     @apply px-2 py-1 m-1 text-xs font-medium align-middle;
     @apply bg-gray-200 hover:bg-gray-700;
     @apply text-gray-700 hover:text-gray-200;
@@ -67,6 +66,28 @@
     @apply rounded ;
     @apply transition ease-in-out duration-500;
 }
+
+@utility description_h1 {
+    @apply text-2xl font-black;
+    @apply mb-2
+}
+
+@utility description_h2 {
+    @apply text-2xl font-bold;
+    @apply mb-2
+}
+
+@utility description_h3 {
+    @apply text-xl underline;
+    @apply mb-2
+}
+
+/* Add Blue Underline for Links */
+@utility description_a {
+    @apply text-prussianblue-800;
+    @apply underline underline-offset-2;
+}
+
 
 /* Define Additional Button CSS classes that extend the `.btn` to use its own colours and other formats */
 @layer components {
@@ -83,5 +104,29 @@
         @apply bg-pink-200 hover:bg-pink-700;
         @apply text-pink-700 hover:text-pink-200;
         @apply border border-pink-700 hover:border-pink-200;
+    }
+
+
+    /* Make the editor height larger to show this is a multiline editor */
+    .ck-editor__editable_inline {
+        @apply min-h-60
+    }
+
+    /* Editor & Description display areas */
+    .ck-content h1, .description h1 {
+        @apply description_h1;
+        @apply text-gray-800;
+    }
+
+    .ck-content h2, .description h2 {
+        @apply description_h2;
+    }
+
+    .ck-content h3, .description h3 {
+        @apply description_h3;
+    }
+
+    .ck-content a, .description a {
+        @apply description_a;
     }
 }
