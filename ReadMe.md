@@ -6,8 +6,6 @@ Base Code for a Vanilla PHP Micro-MVC Framework.
 
 Used by students at North Metropolitan TAFE for learning and assessment purposes.
 
-#### Built With
-
 [![Forks][forks-shield]][forks-url] 
 [![Downloads][downloads-shield]][downloads-url] 
 [![Issues][issues-shield]][issues-url] 
