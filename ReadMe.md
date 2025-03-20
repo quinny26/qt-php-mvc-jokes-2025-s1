@@ -119,12 +119,9 @@ TODO: Instructions for PostgreSQL are to be completed.
 | MariaDB    | [database-mysql.sql](./config/database-mysql.sql)     |
 | PostgreSQL | [TODO: Not available](#)                              |
 
-You now need a second terminal instance that is in the applications' root folder so you are able
-to run:
 
-```shell
-composer run dev
-```
+TODO: More details on use for use in developing basic application using this code.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +176,7 @@ composer run dev
 
 Adrian Gould - Adrian.Gould@nmtafe.wa.edu.au
 
-Project Link: https://github.com/AdyGCode/laravel-11-many-to-many-demo
+Project Link: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
