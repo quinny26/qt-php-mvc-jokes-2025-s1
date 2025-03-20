@@ -196,25 +196,25 @@ corporate or other materials both digital and non-digital.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[forks-shield]: http://img.shields.io/github/forks/adygcode/laravel-11-many-to-many-demo.svg?style=for-the-badge
+[forks-shield]: http://img.shields.io/github/forks/adygcode/xxx-saas-vanilla-mvc-yyyy-sn.svg?style=for-the-badge
 
-[forks-url]: https://github.com/AdyGCode/laravel-11-many-to-many-demo/network/members
+[forks-url]: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn/network/members
 
-[languages-shield]: http://img.shields.io/github/languages/count/adygcode/laravel-11-many-to-many-demo.svg?style=for-the-badge
+[languages-shield]: http://img.shields.io/github/languages/count/adygcode/xxx-saas-vanilla-mvc-yyyy-sn.svg?style=for-the-badge
 
-[languages-url]: https://github.com/AdyGCode/laravel-11-many-to-many-demo/network/members
+[languages-url]: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn/network/members
 
-[downloads-shield]: http://img.shields.io/github/downloads/adygcode/laravel-11-many-to-many-demo/total?style=for-the-badge
+[downloads-shield]: http://img.shields.io/github/downloads/adygcode/xxx-saas-vanilla-mvc-yyyy-sn/total?style=for-the-badge
 
-[downloads-url]: https://github.com/AdyGCode/laravel-11-many-to-many-demo/network/members
+[downloads-url]: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn/network/members
 
-[issues-shield]: http://img.shields.io/github/issues/adygcode/laravel-11-many-to-many-demo.svg?style=for-the-badge
+[issues-shield]: http://img.shields.io/github/issues/adygcode/xxx-saas-vanilla-mvc-yyyy-sn.svg?style=for-the-badge
 
-[issues-url]: https://github.com/adygcode/laravel-11-many-to-many-demo/issues
+[issues-url]: https://github.com/adygcode/xxx-saas-vanilla-mvc-yyyy-sn/issues
 
 [licence-shield]: https://img.shields.io/badge/opensourceinitiative-3DA639?style=for-the-badge
 
-[licence-url]: https://github.com/adygcode/laravel-11-many-to-many-demo/blob/main/License.md
+[licence-url]: https://github.com/adygcode/xxx-saas-vanilla-mvc-yyyy-sn/blob/main/License.md
 
 [product-screenshot]: images/screenshot.png
 
