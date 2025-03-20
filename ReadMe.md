@@ -8,9 +8,22 @@ Used by students at North Metropolitan TAFE for learning and assessment purposes
 
 #### Built With
 
+[![Forks][forks-shield]][forks-url]
+[![Downloads][downloads-shield]][downloads-url]
+
+[![Languages][languages-shield]][languages-url]
+[![Issues][issues-shield]][issues-url]
+
 [![PHP][Php.com]][Php-url]
+[![JS][Js.com]][Js-url]
 [![Tailwindcss][Tailwindcss.com]][Tailwindcss-url]
 [![PhpStorm][PhpStorm.com]][PhpStorm-url]
+
+
+[![Educational Community Licence][licence-shield]][licence-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Definitions
 
@@ -148,18 +161,6 @@ TODO: More details on use for use in developing basic application using this cod
 - erusev/parsedown: Better Markdown Parser in PHP. (2019, December 30). 
   GitHub. https://github.com/erusev/parsedown
 - ...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Badges
-
-[![Forks][forks-shield]][forks-url]
-[![Downloads][downloads-shield]][downloads-url]
-
-[![Languages][languages-shield]][languages-url]
-[![Issues][issues-shield]][issues-url]
-
-[![Educational Community Licence][licence-shield]][licence-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
