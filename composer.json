@@ -2,8 +2,8 @@
   "name": "adygcode/xxx-saas-vanilla-mvc-yyy-sn",
   "description": "Simple PHP MVC & TailwindCSS Application Template",
   "type": "project",
-  "version": "0.1",
-  "time": "2025-03-15",
+  "version": "1.0.0",
+  "time": "2025-03-20",
   "keywords": [
     "mvc",
     "framework",
@@ -27,6 +27,12 @@
       "homepage": "https://www.traversymedia.com"
     }
   ],
+  "scripts": {
+    "dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "npx concurrently --ansi -c \"#93c5fd,#c4b5fd,#fdba74\" \"php -S localhost:8000 -t public\" \"npm run dev\" --names='server,vite'"
+    ]
+  },
   "require": {
     "php": ">=8.3"
   },
