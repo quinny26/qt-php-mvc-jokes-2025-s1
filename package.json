@@ -1,6 +1,6 @@
 {
   "name": "XXX-SaaS-Vanilla-MVC-YYYY-SN",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple PHP MVC & TailwindCSS Application Template",
   "main": "index.php",
   "type": "module",
