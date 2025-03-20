@@ -132,7 +132,7 @@ composer run dev
 
 > TODO: Add details of how to use this demonstration application.
 
-![Admin Dashboard](storage/app/public/images/laravel-many-many.png)
+![Home Screen](src/images/home-screen.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
