@@ -222,7 +222,7 @@ corporate or other materials both digital and non-digital.
 
 [issues-url]: https://github.com/adygcode/xxx-saas-vanilla-mvc-yyyy-sn/issues
 
-[licence-shield]: https://img.shields.io/badge/opensourceinitiative-3DA639?style=for-the-badge
+[licence-shield]: https://img.shields.io/badge/opensourceinitiative-3DA639?style=for-the-badge&logoColor=black
 
 [licence-url]: https://github.com/adygcode/xxx-saas-vanilla-mvc-yyyy-sn/blob/main/License.md
 
@@ -232,7 +232,7 @@ corporate or other materials both digital and non-digital.
 
 [Laravel-url]: https://laravel.com
 
-[Tailwindcss.com]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Tailwindcss.com]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=black
 
 [Tailwindcss-url]: https://tailwindcss.com
 
@@ -244,14 +244,14 @@ corporate or other materials both digital and non-digital.
 
 [Inertia-url]: https://inertiajs.com
 
-[Php.com]: https://img.shields.io/badge/Php-777BB4?style=for-the-badge&logo=php&logoColor=white
+[Php.com]: https://img.shields.io/badge/Php-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=black
 
 [Php-url]: https://inertiajs.com
 
-[PhpStorm.com]: https://img.shields.io/badge/Phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white
+[PhpStorm.com]: https://img.shields.io/badge/Phpstorm-000000?style=for-the-badge&logo=phpstorm&logoColor=white&labelColor=black
 
 [PhpStorm-url]: https://jetbrains.com/phpstorm/
 
-[Js.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white
+[Js.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=black
 
 [Js-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
