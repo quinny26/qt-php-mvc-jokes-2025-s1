@@ -1,6 +1,23 @@
+/**
+ * Import External fonts (eg. google) FIRST
+ *
+ * Good Google Alternatives:
+ * - https://fonts.bunny.net
+ * - https://fonts.coollabs.io
+ */
+@import url(https://fonts.bunny.net/css?family=alegreya-sans-sc:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
+@import url('https://api.fonts.coollabs.io/css2?family=Roboto&display=swap');
+
+
+/**
+ * Import TailwindCSS
+ */
 @import "tailwindcss";
 
 /**
+ * Define a custom Theme
+ *
+ *
  * check https://components.dev.screencraft.net.au for more colours
  *
  * Articles on OKLCH Colour Space:
@@ -9,9 +26,11 @@
  */
 
 @theme {
-    --font-display: "Satoshi", "sans-serif";
+    --font-sans:  'Roboto', "sans-serif";
+    --font-display: 'Alegreya Sans SC', "sans-serif";
     --breakpoint-3xl: 120rem;
 
+    /* Define the Prussian Blue colour scale */
     --colour-prussianblue-50: oklch(from #EEF9FF l c h);
     --colour-prussianblue-100: oklch(from #DCF3FF l c h);
     --colour-prussianblue-200: oklch(from #B2EAFF l c h);
@@ -23,9 +42,9 @@
     --colour-prussianblue-800: oklch(from #006095 l c h);
     --colour-prussianblue-900: oklch(from #004F7A l c h);
     --colour-prussianblue-950: oklch(from #003150 l c h);
-
 }
 
+/* Define Prussian Blue for Text, Backgrounds and Borders */
 @utility text-prussianblue-* {
         color: --value(--colour-prussianblue-*);
 }
@@ -38,6 +57,7 @@
         border-color: --value(--colour-prussianblue-*);
 }
 
+/* Define a Default Button CSS class (.btn) for use throughout the application */
 @utility  btn {
     @apply px-2 py-1 m-1 text-xs font-medium align-middle;
     @apply bg-gray-200 hover:bg-gray-700;
@@ -48,7 +68,7 @@
     @apply transition ease-in-out duration-500;
 }
 
-
+/* Define Additional Button CSS classes that extend the `.btn` to use its own colours and other formats */
 @layer components {
     /* Button Component */
     .btn-primary {
@@ -58,4 +78,10 @@
         @apply border border-prussianblue-700 hover:border-prussianblue-200;
     }
 
+    .btn-secondary {
+        @apply btn;
+        @apply bg-pink-200 hover:bg-pink-700;
+        @apply text-pink-700 hover:text-pink-200;
+        @apply border border-pink-700 hover:border-pink-200;
+    }
 }
