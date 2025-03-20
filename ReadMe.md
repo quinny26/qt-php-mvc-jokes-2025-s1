@@ -33,14 +33,10 @@ Used by students at North Metropolitan TAFE for learning and assessment purposes
 This small demonstration application was developed to assist in the
 learning the process of developing a micro-framework.
 
-The code is based on the Micro-0MVC developed by
-
-Based on the [Workopia Project](https://github.com/bradtraversy/workopia-php)
-from the [PHP From Scratch course](https://www.traversymedia.com/php-from-scratch),
-and the subsequent 
-[supporting tutorial](https://github.com/AdyGCode/SaaS-FED-Notes/tree/main/session-07)
-by [Adrian Gould](https://adygcode.github.io/) & 
-[North Metropolitan TAFE](https://www.northmetrotafe.wa.edu.au/)
+This code is based on the [Workopia Project](https://github.com/bradtraversy/workopia-php)
+Micro-MVC Framework from the [PHP From Scratch course](https://www.traversymedia.com/php-from-scratch),
+and the subsequent [supporting tutorial](https://github.com/AdyGCode/SaaS-FED-Notes/tree/main/session-07)
+by [Adrian Gould](https://adygcode.github.io/) & [North Metropolitan TAFE](https://www.northmetrotafe.wa.edu.au/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,12 +115,9 @@ TODO: Instructions for PostgreSQL are to be completed.
 | MariaDB    | [database-mysql.sql](./config/database-mysql.sql)     |
 | PostgreSQL | [TODO: Not available](#)                              |
 
-You now need a second terminal instance that is in the applications' root folder so you are able
-to run:
 
-```shell
-composer run dev
-```
+TODO: More details on use for use in developing basic application using this code.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +172,7 @@ composer run dev
 
 Adrian Gould - Adrian.Gould@nmtafe.wa.edu.au
 
-Project Link: https://github.com/AdyGCode/laravel-11-many-to-many-demo
+Project Link: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
