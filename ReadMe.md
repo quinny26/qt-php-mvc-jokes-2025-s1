@@ -8,19 +8,17 @@ Used by students at North Metropolitan TAFE for learning and assessment purposes
 
 #### Built With
 
-[![Forks][forks-shield]][forks-url]
-[![Downloads][downloads-shield]][downloads-url]
+[![Forks][forks-shield]][forks-url] 
+[![Downloads][downloads-shield]][downloads-url] 
+[![Issues][issues-shield]][issues-url] 
 
-[![Languages][languages-shield]][languages-url]
-[![Issues][issues-shield]][issues-url]
+[![Languages][languages-shield]][languages-url] 
+[![PHP][Php.com]][Php-url] 
+[![JS][Js.com]][Js-url] 
 
-[![PHP][Php.com]][Php-url]
-[![JS][Js.com]][Js-url]
-[![Tailwindcss][Tailwindcss.com]][Tailwindcss-url]
-[![PhpStorm][PhpStorm.com]][PhpStorm-url]
-
-
-[![Educational Community Licence][licence-shield]][licence-url]
+[![Tailwindcss][Tailwindcss.com]][Tailwindcss-url] 
+[![PhpStorm][PhpStorm.com]][PhpStorm-url] 
+[![Educational Community Licence][licence-shield]][licence-url] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
