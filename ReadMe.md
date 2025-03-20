@@ -1,6 +1,6 @@
+<a name="readme-top" id="readme-top"></a>
 # XXX SaaS Vanilla MVC YYYY SN
 
-<a name="readme-top" id="readme-top"></a>
 
 Base Code for a Vanilla PHP Micro-MVC Framework.
 
