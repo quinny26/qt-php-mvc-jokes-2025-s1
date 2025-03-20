@@ -69,17 +69,22 @@
 
 @utility description_h1 {
     @apply text-2xl font-black;
-    @apply mb-2
+    @apply mb-4 mt-6;
 }
 
 @utility description_h2 {
     @apply text-2xl font-bold;
-    @apply mb-2
+    @apply mb-2 mt-4;
 }
 
 @utility description_h3 {
     @apply text-xl underline;
-    @apply mb-2
+    @apply mb-2 mt-4;
+}
+
+@utility description_list {
+    @apply list-inside;
+    @apply my-2;
 }
 
 /* Add Blue Underline for Links */
@@ -129,4 +134,21 @@
     .ck-content a, .description a {
         @apply description_a;
     }
+
+.ck-content p, .description p {
+        @apply my-2;
+    }
+
+    .ck-content ul, .ck-content ol, .description ul, .description ol {
+        @apply description_list;
+    }
+
+    .ck-content ul li, .description ul li {
+        @apply list-disc list-item ml-2;
+    }
+    .ck-content ol li, .description ol li {
+        @apply list-decimal list-item ml-2;
+    }
+
+
 }

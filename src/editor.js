@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ClassicEditor
             .create(messageEditor, {
                 licenseKey: 'GPL', // Use license key for commercial applications, or 'GPL' for Open source Projects.
-                toolbar: ['heading', '|', 'bold', 'italic', '|', 'link', '|', 'redo', 'undo' ],
+                toolbar: ['heading', '|', 'bold', 'italic', '|', 'numberedList', 'bulletedList', '|', 'redo', 'undo' ],
                 placeholder: 'Enter your message here...'
             })
             .catch(error => {
