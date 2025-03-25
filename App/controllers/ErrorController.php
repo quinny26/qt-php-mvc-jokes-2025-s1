@@ -17,13 +17,23 @@
 
 namespace App\Controllers;
 
+/**
+ * Error Controller Class
+ *
+ * Provides static methods for the display of common
+ * HTTP error codes including 404 and 403.
+ */
 class ErrorController
 {
-    /*
-       * 404 not found error
-       *
-       * @return void
-       */
+    /**
+     * 404 not found error
+     *
+     * Provides the error view with the 404 (not found) error code
+     * and a suitable message.
+     *
+     * @param string $message an optional message string
+     * @return void
+     */
     public static function notFound($message = 'Resource not found')
     {
         http_response_code(404);
@@ -34,9 +44,13 @@ class ErrorController
         ]);
     }
 
-    /*
+    /**
      * 403 unauthorized error
      *
+     * Provides the error view with the status of 403
+     * and a suitable message.
+     *
+     * @param string $message an optional message string
      * @return void
      */
     public static function unauthorized($message = 'You are not authorized to view this resource')
@@ -48,4 +62,5 @@ class ErrorController
             'message' => $message
         ]);
     }
+
 }
