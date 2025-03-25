@@ -116,7 +116,9 @@ CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`users`
     `state`      varchar(45)       DEFAULT NULL,
     `country`    varchar(45)       DEFAULT 'Australia',
     `created_at` timestamp    NULL DEFAULT CURRENT_TIMESTAMP,
+
     PRIMARY KEY (`id`)
+
     ) ENGINE = InnoDB
     AUTO_INCREMENT = 7
     DEFAULT CHARSET = utf8mb4
@@ -152,11 +154,73 @@ CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`products`
     `description` text,
     `price`       int                      DEFAULT NULL,
     `created_at`  timestamp       NULL     DEFAULT CURRENT_TIMESTAMP,
+
     PRIMARY KEY (`id`)
+
     ) ENGINE = InnoDB
     AUTO_INCREMENT = 21
     DEFAULT CHARSET = utf8mb4
     COLLATE = utf8mb4_general_ci;
+
+-- --------------------------------------------------------------------------------------------
+-- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- --------------------------------------------------------------------------------------------
+USE XXX_SaaS_FED_YYYY_SN;
+
+-- --------------------------------------------------------------------------------------------
+-- Remove any existing Categories table
+-- --------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`categories`;
+
+-- --------------------------------------------------------------------------------------------
+-- Create the Categories table structure
+-- --------------------------------------------------------------------------------------------
+CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`categories`
+(
+    `id`         BIGINT         UNSIGNED    AUTO_INCREMENT,
+    `name`       VARCHAR(64)    NOT NULL    DEFAULT 'Unknown',
+    `user_id`    BIGINT         UNSIGNED    DEFAULT 10,
+    `created_at` DATETIME       NOT NULL    DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME       NULL        DEFAULT NULL,
+
+    PRIMARY KEY (`id`),
+    UNIQUE `category_name_unique` (`name`)
+
+) ENGINE = InnoDB
+  CHARSET = utf8mb4
+  COLLATE utf8mb4_general_ci;
+
+-- --------------------------------------------------------------------------------------------
+-- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- --------------------------------------------------------------------------------------------
+USE XXX_SaaS_FED_YYYY_SN;
+
+-- --------------------------------------------------------------------------------------------
+-- Remove any existing Jokes table
+-- --------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`jokes`;
+
+-- --------------------------------------------------------------------------------------------
+-- Create the Jokes table structure
+-- --------------------------------------------------------------------------------------------
+CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`jokes`
+(
+    `id`          BIGINT UNSIGNED AUTO_INCREMENT,
+    `title`       VARCHAR(128) NOT NULL,
+    `body`        TEXT         NOT NULL,
+    `category_id` BIGINT UNSIGNED       DEFAULT 1,
+    `tags`        VARCHAR(255) NULL     DEFAULT NULL,
+    `author_id`   BIGINT UNSIGNED       DEFAULT 1,
+    `created_at`  DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at`  DATETIME     NULL     DEFAULT NULL,
+
+    PRIMARY KEY (`id`),
+    FULLTEXT `joke_text` (`body`),
+    FULLTEXT `tag_index` (`tags`)
+
+) ENGINE = InnoDB
+  CHARSET = utf8mb4
+  COLLATE utf8mb4_general_ci;
 -- ====================================> END SECTION <=========================================
 
 
@@ -263,6 +327,55 @@ VALUES (40380, 20, 'Sheep BrickHeadz',
        (885, 101, 'Space Scooter',
         'Space theme: A small, classic LEGO Space set featuring a simple yet iconic space scooter vehicle.', 999,
         '1979-01-01');
+
+
+-- --------------------------------------------------------------------------------------------
+-- Seed Categories Table
+-- --------------------------------------------------------------------------------------------
+
+INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+VALUES (1, 'unknown', '1970-01-01 00:00:01');
+
+INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+VALUES (11, 'dad', '1970-01-01 00:00:01');
+
+INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+VALUES (9, 'geek', '1970-01-01 00:00:02'),
+       (10, 'programmer', '1970-01-01 00:00:02'),
+       (2, 'web', '1970-01-01 00:00:02'),
+       (3, 'knock-knock', '1970-01-01 00:00:03'),
+       (4, 'rude', '1970-01-01 00:00:04'),
+       (5, 'dog', '1970-01-01 00:00:05'),
+       (6, 'cat', '1970-01-01 00:00:06'),
+       (7, 'halloween', '1970-01-01 00:00:07'),
+       (8, 'animal', '1970-01-01 00:00:08');
+
+
+-- --------------------------------------------------------------------------------------------
+-- Seed Jokes Table
+-- --------------------------------------------------------------------------------------------
+
+INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`jokes`(`id`, `title`, `body`, `category_id`, `tags`,
+                                                `author_id`, `created_at`, `updated_at`)
+VALUES (1, 'Skeleton Fight',
+        '&lt;p&gt;Why don\'t skeletons fight each other?&lt;/p&gt;&lt;p&gt;They don\'t have the guts.&lt;/p&gt;',
+        7, 'spooky,funny', 1, now(), null),
+       (2, 'Parallel Lines',
+        '&lt;p&gt;Parallel lines have so much in common.&lt;/p&gt;&lt;p&gt;It\'s a shame they\'ll never meet.&lt;/p&gt;',
+        9, 'geometry,puns', 105, now(), null),
+       (3, 'Embracing Mistakes',
+        '&lt;p&gt;I told my wife she should embrace her mistakes.&lt;/p&gt;&lt;p&gt;She gave me a hug.&lt;/p&gt;',
+        11, 'relationships,dad jokes', 104, now(), null),
+       (4, 'Broken Pencil',
+        '&lt;p&gt;I was going to tell a joke about a broken pencil, but it was pointless.&lt;/p&gt;',
+        11, 'puns,funny', 103, now(), null),
+       (5, 'Light Sleeper',
+        '&lt;p&gt;I told my wife she should stop sleeping in the fridge.&lt;/p&gt;&lt;p&gt;She said she\'s just a light sleeper.&lt;/p&gt;',
+        11, 'sleep,puns', 105, now(), null),
+       (6, 'Elevator Business',
+        '&lt;p&gt;I\'m thinking of starting a business installing elevators.&lt;/p&gt;&lt;p&gt;I hear it has its ups and downs.&lt;/p&gt;',
+        11, 'work,puns', 104, now(), null);
+
 -- ====================================> END SECTION <=========================================
 
 
