@@ -1,11 +1,11 @@
 -- ======================================> BEGIN SECTION <=====================================
 -- BEFORE COMMENCING:
 --
--- - Replace all instances of YYYY with the current year
+-- - Replace all instances of 2025 with the current year
 --   For example, 2025
--- - Replace all instances of SN with S followed by the semester number
+-- - Replace all instances of S1 with S followed by the semester number
 --   For example, S1 for semester 1
--- - Replace ALL instances of XXX with your initials
+-- - Replace ALL instances of QT with your initials
 --   For example, AJG for Adrian Gould
 --
 -- We have split the file into sections each surrounded with a BEGIN SECTION and END SECTION
@@ -30,9 +30,9 @@
 -- --------------------------------------------------------------------------------------------
 -- Clean up existing database and user(s)
 -- --------------------------------------------------------------------------------------------
-DROP DATABASE IF EXISTS XXX_SaaS_FED_YYYY_SN;
-DROP USER IF EXISTS 'XXX_SaaS_FED_YYYY_SN'@'localhost';
-DROP USER IF EXISTS 'XXX_SaaS_FED_YYYY_SN'@'127.0.0.1';
+DROP DATABASE IF EXISTS QT_SaaS_FED_2025_S1;
+DROP USER IF EXISTS 'QT_SaaS_FED_2025_S1'@'localhost';
+DROP USER IF EXISTS 'QT_SaaS_FED_2025_S1'@'127.0.0.1';
 -- ====================================> END SECTION <=========================================
 
 
@@ -46,36 +46,36 @@ DROP USER IF EXISTS 'XXX_SaaS_FED_YYYY_SN'@'127.0.0.1';
 -- --------------------------------------------------------------------------------------------
 
 -- --------------------------------------------------------------------------------------------
--- Create Database named 'XXX_SaaS_FED_YYYY_SN'
+-- Create Database named 'QT_SaaS_FED_2025_S1'
 -- --------------------------------------------------------------------------------------------
-CREATE DATABASE IF NOT EXISTS XXX_SaaS_FED_YYYY_SN;
+CREATE DATABASE IF NOT EXISTS QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Create User & Grant Permissions
 -- We create users that are able to access the database via localhost and 127.0.0.1  just in
 -- case IPv6 is detected. Some RDBMS systems may not be 100% compatible with IPv6 IP addresses.
 -- --------------------------------------------------------------------------------------------
-CREATE USER 'XXX_SaaS_FED_YYYY_SN'@'localhost'
+CREATE USER 'QT_SaaS_FED_2025_S1'@'localhost'
     IDENTIFIED WITH mysql_native_password
         USING PASSWORD('Password1234');
 
-CREATE USER 'XXX_SaaS_FED_YYYY_SN'@'127.0.0.1'
+CREATE USER 'QT_SaaS_FED_2025_S1'@'127.0.0.1'
     IDENTIFIED WITH mysql_native_password
         USING PASSWORD('Password1234');
 
 GRANT USAGE ON *.*
-    TO 'XXX_SaaS_FED_YYYY_SN'@'localhost';
+    TO 'QT_SaaS_FED_2025_S1'@'localhost';
 
 GRANT USAGE ON *.*
-    TO 'XXX_SaaS_FED_YYYY_SN'@'127.0.0.1';
+    TO 'QT_SaaS_FED_2025_S1'@'127.0.0.1';
 
 GRANT ALL PRIVILEGES
-    ON `XXX_SaaS_FED_YYYY_SN`.*
-    TO 'XXX_SaaS_FED_YYYY_SN'@'localhost';
+    ON `QT_SaaS_FED_2025_S1`.*
+    TO 'QT_SaaS_FED_2025_S1'@'localhost';
 
 GRANT ALL PRIVILEGES
-    ON `XXX_SaaS_FED_YYYY_SN`.*
-    TO 'XXX_SaaS_FED_YYYY_SN'@'127.0.0.1';
+    ON `QT_SaaS_FED_2025_S1`.*
+    TO 'QT_SaaS_FED_2025_S1'@'127.0.0.1';
 
 -- --------------------------------------------------------------------------------------------
 -- Apply the user's privileges.
@@ -94,22 +94,24 @@ FLUSH PRIVILEGES;
 -- --------------------------------------------------------------------------------------------
 
 -- --------------------------------------------------------------------------------------------
--- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- Tell MySQL to use the QT_SaaS_FED_2025_S1 database for commands.
 -- --------------------------------------------------------------------------------------------
-USE XXX_SaaS_FED_YYYY_SN;
+USE QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Remove any existing Users table
 -- --------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`users`;
+DROP TABLE IF EXISTS `QT_SaaS_FED_2025_S1`.`users`;
 
 -- --------------------------------------------------------------------------------------------
 -- Create the table structure for the 'users' table
 -- --------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`users`
+CREATE TABLE IF NOT EXISTS `QT_SaaS_FED_2025_S1`.`users`
 (
     `id`         int          NOT NULL AUTO_INCREMENT,
-    `name`       varchar(255)      DEFAULT NULL,
+    `given_name`       varchar(255)      DEFAULT NULL,
+    `family_name`   varchar(255)       DEFAULT NULL,
+    `prefer_name`   varchar(128)    NOT NULL,
     `email`      varchar(255) NOT NULL,
     `password`   varchar(255) NOT NULL,
     `city`       varchar(45)       DEFAULT NULL,
@@ -134,19 +136,19 @@ CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`users`
 -- --------------------------------------------------------------------------------------------
 
 -- --------------------------------------------------------------------------------------------
--- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- Tell MySQL to use the QT_SaaS_FED_2025_S1 database for commands.
 -- --------------------------------------------------------------------------------------------
-USE XXX_SaaS_FED_YYYY_SN;
+USE QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Remove any existing Products table
 -- --------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`products`;
+DROP TABLE IF EXISTS `QT_SaaS_FED_2025_S1`.`products`;
 
 -- --------------------------------------------------------------------------------------------
 -- Create the Products table structure
 -- --------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`products`
+CREATE TABLE IF NOT EXISTS `QT_SaaS_FED_2025_S1`.`products`
 (
     `id`          bigint unsigned NOT NULL AUTO_INCREMENT,
     `user_id`     bigint unsigned          DEFAULT 10,
@@ -163,19 +165,19 @@ CREATE TABLE IF NOT EXISTS `XXX_SaaS_FED_YYYY_SN`.`products`
     COLLATE = utf8mb4_general_ci;
 
 -- --------------------------------------------------------------------------------------------
--- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- Tell MySQL to use the QT_SaaS_FED_2025_S1 database for commands.
 -- --------------------------------------------------------------------------------------------
-USE XXX_SaaS_FED_YYYY_SN;
+USE QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Remove any existing Categories table
 -- --------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`categories`;
+DROP TABLE IF EXISTS `QT_SaaS_FED_2025_S1`.`categories`;
 
 -- --------------------------------------------------------------------------------------------
 -- Create the Categories table structure
 -- --------------------------------------------------------------------------------------------
-CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`categories`
+CREATE TABLE `QT_php_mvc_jokes_2025_S1`.`categories`
 (
     `id`         BIGINT         UNSIGNED    AUTO_INCREMENT,
     `name`       VARCHAR(64)    NOT NULL    DEFAULT 'Unknown',
@@ -191,19 +193,19 @@ CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`categories`
   COLLATE utf8mb4_general_ci;
 
 -- --------------------------------------------------------------------------------------------
--- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- Tell MySQL to use the QT_SaaS_FED_2025_S1 database for commands.
 -- --------------------------------------------------------------------------------------------
-USE XXX_SaaS_FED_YYYY_SN;
+USE QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Remove any existing Jokes table
 -- --------------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS `XXX_SaaS_FED_YYYY_SN`.`jokes`;
+DROP TABLE IF EXISTS `QT_SaaS_FED_2025_S1`.`jokes`;
 
 -- --------------------------------------------------------------------------------------------
 -- Create the Jokes table structure
 -- --------------------------------------------------------------------------------------------
-CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`jokes`
+CREATE TABLE `QT_php_mvc_jokes_2025_S1`.`jokes`
 (
     `id`          BIGINT UNSIGNED AUTO_INCREMENT,
     `title`       VARCHAR(128) NOT NULL,
@@ -238,37 +240,36 @@ CREATE TABLE `xxx_php_mvc_jokes_yyyy_sn`.`jokes`
 -- --------------------------------------------------------------------------------------------
 
 -- --------------------------------------------------------------------------------------------
--- Tell MySQL to use the XXX_SaaS_FED_YYYY_SN database for commands.
+-- Tell MySQL to use the QT_SaaS_FED_2025_S1 database for commands.
 -- --------------------------------------------------------------------------------------------
-USE XXX_SaaS_FED_YYYY_SN;
+USE QT_SaaS_FED_2025_S1;
 
 -- --------------------------------------------------------------------------------------------
 -- Seed Users Table
 -- The Password is Password1 hashed using the PHP password_hash() method.
 -- --------------------------------------------------------------------------------------------
-INSERT INTO `XXX_SaaS_FED_YYYY_SN`.`users`
-VALUES (10, 'Administrator', 'admin@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Perth', 'WA', 'Australia', '2000-01-01 00:00:01');
 
-INSERT INTO `XXX_SaaS_FED_YYYY_SN`.`users`
-VALUES (20, 'Adrian Gould', 'adrian@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Perth', 'WA', 'Australia', '2024-01-01 10:30:01'),
-       (30, 'YOUR NAME', 'GIVEN_NAME@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Perth', 'WA', 'Australia', '2024-08-10 16:11:43');
+INSERT INTO `QT_SaaS_FED_2025_S1`.`users`
+VALUES (10, 'Ad', 'Ministrator', 'Admin', 'admin@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
+        'WA', 'Australia', '2000-01-01 00:00:01');
 
-INSERT INTO `XXX_SaaS_FED_YYYY_SN`.`users`
-VALUES (100, 'John Doe', 'user1@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Bunbury', 'WA', 'Australia', '2024-08-15 13:04:21'),
-       (101, 'Jane Doe', 'user2@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Melbourne', 'VIC', 'Australia', '2024-08-20 13:17:21'),
-       (102, 'Steve Smith', 'user3@example.com',
-        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.',
-        'Adelaide', 'SA', 'Australia', '2024-08-20 17:59:13');
+INSERT INTO `QT_SaaS_FED_2025_S1`.`users`
+VALUES (20, 'Adrian', 'Gould', 'Ady', 'adrian@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
+        'WA', 'Australia', '2024-01-01 10:30:01');
+
+INSERT INTO `QT_SaaS_FED_2025_S1`.`users`
+VALUES (100, 'John', 'Doe', 'Johnny', 'user1@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Bunbury',
+        'WA', 'Australia', '2024-08-15 13:04:21'),
+        (101, 'Jane', 'Doe', 'Jane', 'user2@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Melbourne',
+        'VIC', 'Australia', '2024-08-20 13:17:21'),
+        (102, 'Steve', 'Smith', 'Steve', 'user3@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Adelaide',
+        'SA', 'Australia', '2024-08-20 17:59:13');
+
 -- ====================================> END SECTION <=========================================
 
 
@@ -281,7 +282,7 @@ VALUES (100, 'John Doe', 'user1@example.com',
 -- --------------------------------------------------------------------------------------------
 -- Seed Products Table
 -- --------------------------------------------------------------------------------------------
-INSERT INTO `XXX_SaaS_FED_YYYY_SN`.`products`(`id`, `user_id`, `name`, `description`, `price`, `created_at`)
+INSERT INTO `QT_SaaS_FED_2025_S1`.`products`(`id`, `user_id`, `name`, `description`, `price`, `created_at`)
 VALUES (40380, 20, 'Sheep BrickHeadz',
         'BrickHeadz theme: This set features an adorable sheep with a cute, blocky design, perfect for collectors and fans of the BrickHeadz series.',
         1999, '2020-01-01'),
@@ -333,13 +334,13 @@ VALUES (40380, 20, 'Sheep BrickHeadz',
 -- Seed Categories Table
 -- --------------------------------------------------------------------------------------------
 
-INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+INSERT INTO `QT_php_mvc_jokes_2025_S1`.`categories`(`id`, `name`, `created_at`)
 VALUES (1, 'unknown', '1970-01-01 00:00:01');
 
-INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+INSERT INTO `QT_php_mvc_jokes_2025_S1`.`categories`(`id`, `name`, `created_at`)
 VALUES (11, 'dad', '1970-01-01 00:00:01');
 
-INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`categories`(`id`, `name`, `created_at`)
+INSERT INTO `QT_php_mvc_jokes_2025_S1`.`categories`(`id`, `name`, `created_at`)
 VALUES (9, 'geek', '1970-01-01 00:00:02'),
        (10, 'programmer', '1970-01-01 00:00:02'),
        (2, 'web', '1970-01-01 00:00:02'),
@@ -355,7 +356,7 @@ VALUES (9, 'geek', '1970-01-01 00:00:02'),
 -- Seed Jokes Table
 -- --------------------------------------------------------------------------------------------
 
-INSERT INTO `xxx_php_mvc_jokes_yyyy_sn`.`jokes`(`id`, `title`, `body`, `category_id`, `tags`,
+INSERT INTO `QT_php_mvc_jokes_2025_S1`.`jokes`(`id`, `title`, `body`, `category_id`, `tags`,
                                                 `author_id`, `created_at`, `updated_at`)
 VALUES (1, 'Skeleton Fight',
         '&lt;p&gt;Why don\'t skeletons fight each other?&lt;/p&gt;&lt;p&gt;They don\'t have the guts.&lt;/p&gt;',
