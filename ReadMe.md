@@ -1,5 +1,5 @@
 <a name="readme-top" id="readme-top"></a>
-# XXX SaaS Vanilla MVC YYYY SN
+# QT SaaS Vanilla MVC 2025 S1
 
 Base Code for a Vanilla PHP Micro-MVC Framework.
 

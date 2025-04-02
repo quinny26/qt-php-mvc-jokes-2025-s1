@@ -260,6 +260,11 @@ VALUES (20, 'Adrian', 'Gould', 'Ady', 'adrian@example.com',
         'WA', 'Australia', '2024-01-01 10:30:01');
 
 INSERT INTO `QT_SaaS_FED_2025_S1`.`users`
+VALUES (30, 'Quinny', 'Trang', 'Quinn', 'quinny@example.com',
+        '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
+        'WA', 'Australia', '2024-08-10 16:11:43');
+
+INSERT INTO `QT_SaaS_FED_2025_S1`.`users`
 VALUES (100, 'John', 'Doe', 'Johnny', 'user1@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Bunbury',
         'WA', 'Australia', '2024-08-15 13:04:21'),
