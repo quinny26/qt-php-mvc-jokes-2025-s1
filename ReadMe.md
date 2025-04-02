@@ -1,9 +1,7 @@
 <a name="readme-top" id="readme-top"></a>
 # QT SaaS Vanilla MVC 2025 S1
-
-Base Code for a Vanilla PHP Micro-MVC Framework.
-
-Used by students at North Metropolitan TAFE for learning and assessment purposes.
+ 
+Pure Vanilla PHP Micro-MVC Framework to demonstrate understanding of Vanilla MVC.
 
 
 [![Forks][forks-shield]][forks-url] 
@@ -23,17 +21,17 @@ Used by students at North Metropolitan TAFE for learning and assessment purposes
 
 ## Definitions
 
-| Term                | Definition                                                                                                  |
-|---------------------|-------------------------------------------------------------------------------------------------------------|
-| BREAD               | Database operations to Browse, Read, Edit, Add and Delete data                                              |
-| CRUD                | More commonly used term over BREAD. Create (Add), Retrieve (Browse/Read), Update (Edit) and Delete (Delete) |
-| Relational Database | ...                                                                                                         |
-| One to One          | ...                                                                                                         |
-| One to Many         | ...                                                                                                         |
-| Many to Many        | ...                                                                                                         |
-| Polymorphism        | ...                                                                                                         |
-| MVC                 | ...                                                                                                         |
-| ...                 | ...                                                                                                         |
+| Term                | Definition                                                                                                                                                                        |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| BREAD               | Database operations to Browse, Read, Edit, Add and Delete data                                                                                                                    |
+| CRUD                | More commonly used term over BREAD. Create (Add), Retrieve (Browse/Read), Update (Edit) and Delete (Delete)                                                                       |
+| Relational Database | Relational database establish relationship between information by joining tables, making it easier to gain insights about the overall information and relationships between the data. |
+| One to One          | One to one relationship between data is a relationship in two tables, where each data connect to one another once only.                                                           |
+| One to Many         | One to many relationship between data is a relationship in two tables, where one data connect many times to the other data.                                                       |
+| Many to Many        | Many to many relationship between data is a relationship in two tables, where many data connect to the other data many times.                                                     |
+| Polymorphism        | Polymorphism is one of the core concept of Object Oriented Programming, it is the ability to present and function under different forms.                                          |
+| MVC                 | MVC (Model-View-Controller) is a pattern in software design commonly used to separates an application into three main logical components: the model, the view, and the controller                                                                                                                                                                                  |
+| ...                 | ...                                                                                                                                                                               |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,9 +174,9 @@ TODO: More details on use for use in developing basic application using this cod
 
 ## Contact
 
-Adrian Gould - Adrian.Gould@nmtafe.wa.edu.au
+Adrian Gould - 20026235@tafe.wa.edu.au
 
-Project Link: https://github.com/AdyGCode/xxx-saas-vanilla-mvc-yyyy-sn
+Project Link: https://github.com/quinny26/qt-php-mvc-jokes-2025-s1
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
