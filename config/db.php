@@ -4,16 +4,16 @@
  *
  * Filename:        db.php
  * Location:        config/
- * Project:         XXX-SaaS-Vanilla-MVC-SN
+ * Project:         QT_php_mvc_jokes_2025_S1
  * Date Created:    2025-03-13
  *
- * Author:          YOUR NAME
+ * Author:          Quinny Trang
  *
  */
 return [
     'host' => '127.0.0.1',
     'port' => 3306,
-    'dbname' => 'XXX_SaaS_FED_YYYY_SN',
-    'username' => 'XXX_SaaS_FED_YYYY_SN',
+    'dbname' => 'qt_php_mvc_jokes_2025_S1',
+    'username' => 'QT_php_mvc_jokes_2025_S1',
     'password' => 'Password1234'
 ];

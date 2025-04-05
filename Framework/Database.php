@@ -6,10 +6,10 @@
  *
  * Filename:        Database.php
  * Location:        /Framework/
- * Project:         XXX-SaaS-Vanilla-MVC-YYYY-SN
- * Date Created:    13/03/2025
+ * Project:         QT_php_mvc_jokes_2025_S1
+ * Date Created:    2/04/2025
  *
- * Author:          Adrian Gould <Adrian.Gould@nmtafe.wa.edu.au>
+ * Author:          Quinny Trang <20026235@tafe.wa.edu.au>
  *
  */
 

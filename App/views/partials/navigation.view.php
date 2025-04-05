@@ -5,9 +5,9 @@
  * Filename:        navigation.view.php
  * Location:        App/views/partials
  * Project:         SaaS-FED-Notes
- * Date Created:    20/08/2024
+ * Date Created:    5/4/2025
  *
- * Author:          Adrian Gould <Adrian.Gould@nmtafe.wa.edu.au>
+ * Author:          Quinny Trang <20026235@tafe.wa.edu.au>
  *
  */
 
@@ -60,14 +60,20 @@ $authenticated = new Authorise();
                     Products
                 </a>
             </li>
-            <li>
-                <a href="#"
-                   class="pb-2 px-1 text-gray-400 hover:text-gray-300
-                     border-0 border-b-2 hover:border-b-gray-500
-                     transition ease-in-out duration-500">
-                    Link 1
-                </a>
-            </li>
+            <!-- Code from Claude AI https://claude.ai/share/26323323-6c89-4aae-be74-756447ab0264 -->
+            <?php if ($authenticated->isAuthenticated()) { 
+                $userId = $_SESSION['user']['id'] ?? null; // Get current user ID
+                    ?>
+                        <li>
+                            <a href="/users/<?= $userId ?>/edit"
+                            class="pb-2 px-1 text-gray-400 hover:text-gray-300
+                            border-0 border-b-2 hover:border-b-gray-500
+                            transition ease-in-out duration-500">
+                            My Profile
+                            </a>
+                        </li>
+                    <?php } ?>
+            <!-- Code from Claude AI -->    
             <li>
                 <a href="#"
                    class="pb-2 px-1 text-gray-400 hover:text-gray-300

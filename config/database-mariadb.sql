@@ -118,6 +118,7 @@ CREATE TABLE IF NOT EXISTS `QT_php_mvc_jokes_2025_S1`.`users`
     `state`      varchar(45)       DEFAULT NULL,
     `country`    varchar(45)       DEFAULT 'Australia',
     `created_at` timestamp    NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME       NULL        DEFAULT NULL,
 
     PRIMARY KEY (`id`)
 
@@ -252,28 +253,28 @@ USE QT_php_mvc_jokes_2025_S1;
 INSERT INTO `QT_php_mvc_jokes_2025_S1`.`users`
 VALUES (10, 'Ad', 'Ministrator', 'Admin', 'admin@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
-        'WA', 'Australia', '2000-01-01 00:00:01');
+        'WA', 'Australia', '2000-01-01 00:00:01', null);
 
 INSERT INTO `QT_php_mvc_jokes_2025_S1`.`users`
 VALUES (20, 'Adrian', 'Gould', 'Ady', 'adrian@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
-        'WA', 'Australia', '2024-01-01 10:30:01');
+        'WA', 'Australia', '2024-01-01 10:30:01', null);
 
 INSERT INTO `QT_php_mvc_jokes_2025_S1`.`users`
 VALUES (30, 'Quinny', 'Trang', 'Quinn', 'quinny@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Perth',
-        'WA', 'Australia', '2024-08-10 16:11:43');
+        'WA', 'Australia', '2024-08-10 16:11:43', null);
 
 INSERT INTO `QT_php_mvc_jokes_2025_S1`.`users`
 VALUES (100, 'John', 'Doe', 'Johnny', 'user1@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Bunbury',
-        'WA', 'Australia', '2024-08-15 13:04:21'),
+        'WA', 'Australia', '2024-08-15 13:04:21', null),
         (101, 'Jane', 'Doe', 'Jane', 'user2@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Melbourne',
-        'VIC', 'Australia', '2024-08-20 13:17:21'),
+        'VIC', 'Australia', '2024-08-20 13:17:21', null),
         (102, 'Steve', 'Smith', 'Steve', 'user3@example.com',
         '$2y$10$4Ae3n2iQ0MwXMNz0UEmNne2PaNyfYsBFYb97nayHWTDCwpnuPi6f.', 'Adelaide',
-        'SA', 'Australia', '2024-08-20 17:59:13');
+        'SA', 'Australia', '2024-08-20 17:59:13', null);
 
 -- ====================================> END SECTION <=========================================
 

@@ -5,9 +5,9 @@
  * Filename:        message.view.php
  * Location:        App/views/partials
  * Project:         SaaS-Vanilla-MVC
- * Date Created:    23/08/2024
+ * Date Created:    5/4/2025
  *
- * Author:          Adrian Gould <Adrian.Gould@nmtafe.wa.edu.au>
+ * Author:          Quinny Trang <20026235@tafe.wa.edu.au>
  *
  */
 

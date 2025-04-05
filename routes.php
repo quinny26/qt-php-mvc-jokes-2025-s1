@@ -9,9 +9,9 @@
  * Filename:        routes.php
  * Location:        ${FILE_LOCATION}
  * Project:         SaaS-Vanilla-MVC
- * Date Created:    20/08/2024
+ * Date Created:    2/4/2025
  *
- * Author:          Adrian Gould <Adrian.Gould@nmtafe.wa.edu.au>
+ * Author:          Quinny Trang <20026235@nmtafe.wa.edu.au>
  *
  */
 
@@ -25,6 +25,10 @@ $router->get('/auth/login', 'UserController@login', ['guest']);
 $router->post('/auth/register', 'UserController@store', ['guest']);
 $router->post('/auth/logout', 'UserController@logout', ['auth']);
 $router->post('/auth/login', 'UserController@authenticate', ['guest']);
+
+
+$router->get('/users/{id}/edit', 'UserController@edit');
+$router->put('/users/{id}', 'UserController@update');
 
 /**
  * Example Routes for a feature (Feature)
