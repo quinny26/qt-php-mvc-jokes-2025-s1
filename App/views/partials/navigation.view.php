@@ -70,6 +70,21 @@ $authenticated = new Authorise();
             }
             ?>
 
+            <?php
+            if ($authenticated->isAuthenticated()) {
+                ?>
+                <li>
+                    <a href="/jokes"
+                       class="pb-2 px-1 text-gray-400 hover:text-gray-300
+                     border-0 border-b-2 hover:border-b-gray-500
+                     transition ease-in-out duration-500">
+                        Jokes
+                    </a>
+                </li>
+                <?php
+            }
+            ?>
+
             <?php if ($authenticated->isAuthenticated()) { 
                 $userId = $_SESSION['user']['id'] ?? null;
                     ?>

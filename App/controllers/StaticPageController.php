@@ -1,9 +1,7 @@
 <?php
 /**
- * User Controller
+ * Static Page Controller
  *
- * Provides the Register, Login and Logout capabilities
- * of the application
  *
  * Filename:        Static Page Controller.php
  * Location:        App/Controllers

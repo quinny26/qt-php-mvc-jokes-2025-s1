@@ -20,6 +20,9 @@ $router->get('home', 'StaticPageController@index');
 $router->get('about', 'StaticPageController@about');
 $router->get('contact', 'StaticPageController@contact');
 
+//Jokes pages
+$router->get('/jokes', 'JokeController@index');
+
 $router->get('/dashboard', 'HomeController@dashboard');
 
 $router->get('/auth/register', 'UserController@create', ['guest']);
