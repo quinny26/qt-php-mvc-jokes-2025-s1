@@ -29,11 +29,29 @@ $authenticated = new Authorise();
     <nav class="flex flex-row py-4 flex-grow ml-8">
         <ul class="flex flex-row gap-4 flex-grow">
             <li>
-                <a href="/"
+                <a href="/home"
                    class="pb-2 px-1 text-gray-400 hover:text-gray-300
                      border-0 border-b-2 border-b-prussianblue-500 hover:border-b-gray-500
                      transition ease-in-out duration-500">
                     Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/about"
+                   class="pb-2 px-1 text-gray-400 hover:text-gray-300
+                     border-0 border-b-2 border-b-prussianblue-500 hover:border-b-gray-500
+                     transition ease-in-out duration-500">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="/contact"
+                   class="pb-2 px-1 text-gray-400 hover:text-gray-300
+                     border-0 border-b-2 border-b-prussianblue-500 hover:border-b-gray-500
+                     transition ease-in-out duration-500">
+                    Contact
                 </a>
             </li>
 
@@ -52,17 +70,8 @@ $authenticated = new Authorise();
             }
             ?>
 
-            <li>
-                <a href="/products"
-                   class="pb-2 px-1 text-gray-400 hover:text-gray-300
-                     border-0 border-b-2 hover:border-b-gray-500
-                     transition ease-in-out duration-500">
-                    Products
-                </a>
-            </li>
-            <!-- Code from Claude AI https://claude.ai/share/26323323-6c89-4aae-be74-756447ab0264 -->
             <?php if ($authenticated->isAuthenticated()) { 
-                $userId = $_SESSION['user']['id'] ?? null; // Get current user ID
+                $userId = $_SESSION['user']['id'] ?? null;
                     ?>
                         <li>
                             <a href="/users/<?= $userId ?>/edit"
@@ -72,16 +81,7 @@ $authenticated = new Authorise();
                             My Profile
                             </a>
                         </li>
-                    <?php } ?>
-            <!-- Code from Claude AI -->    
-            <li>
-                <a href="#"
-                   class="pb-2 px-1 text-gray-400 hover:text-gray-300
-                     border-0 border-b-2 hover:border-b-gray-500
-                     transition ease-in-out duration-500">
-                    Link 1
-                </a>
-            </li>
+                    <?php } ?>   
         </ul>
 
         <ul class="flex flex-row gap-4">

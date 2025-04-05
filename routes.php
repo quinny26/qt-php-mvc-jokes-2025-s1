@@ -15,7 +15,10 @@
  *
  */
 
-$router->get('/', 'HomeController@index');
+ //Static pages 
+$router->get('home', 'StaticPageController@index');
+$router->get('about', 'StaticPageController@about');
+$router->get('contact', 'StaticPageController@contact');
 
 $router->get('/dashboard', 'HomeController@dashboard');
 
@@ -26,7 +29,7 @@ $router->post('/auth/register', 'UserController@store', ['guest']);
 $router->post('/auth/logout', 'UserController@logout', ['auth']);
 $router->post('/auth/login', 'UserController@authenticate', ['guest']);
 
-
+//Edit page for users
 $router->get('/users/{id}/edit', 'UserController@edit');
 $router->put('/users/{id}', 'UserController@update');
 
