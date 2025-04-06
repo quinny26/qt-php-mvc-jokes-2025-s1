@@ -22,6 +22,7 @@ $router->get('contact', 'StaticPageController@contact');
 
 //Jokes pages
 $router->get('/jokes', 'JokeController@index');
+$router->get('/jokes/search', 'JokeController@search');
 
 $router->get('/dashboard', 'HomeController@dashboard');
 

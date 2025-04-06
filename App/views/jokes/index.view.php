@@ -55,7 +55,7 @@ loadPartial('navigation');
 
                     <section class="flex-grow p-4 ">
                         <div class="bg-white">
-                            Category: <?= $joke->category_id ?>
+                            Category: <?= $joke->category_name ?>
                         </div>
                     </section>
 
