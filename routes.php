@@ -23,8 +23,14 @@ $router->get('contact', 'StaticPageController@contact');
 //Jokes pages
 $router->get('/jokes', 'JokeController@index');
 $router->get('/jokes/search', 'JokeController@search');
+$router->get('/jokes/{id}', 'JokeController@show');
+
 
 $router->get('/dashboard', 'HomeController@dashboard');
+
+//Edit page for users
+$router->get('/users/{id}/edit', 'UserController@edit');
+$router->put('/users/{id}', 'UserController@update');
 
 $router->get('/auth/register', 'UserController@create', ['guest']);
 $router->get('/auth/login', 'UserController@login', ['guest']);
@@ -32,10 +38,6 @@ $router->get('/auth/login', 'UserController@login', ['guest']);
 $router->post('/auth/register', 'UserController@store', ['guest']);
 $router->post('/auth/logout', 'UserController@logout', ['auth']);
 $router->post('/auth/login', 'UserController@authenticate', ['guest']);
-
-//Edit page for users
-$router->get('/users/{id}/edit', 'UserController@edit');
-$router->put('/users/{id}', 'UserController@update');
 
 /**
  * Example Routes for a feature (Feature)

@@ -233,7 +233,7 @@ class UserController
      * @return null
      * @throws \Exception
      */
-    public function update(array $params): null
+    public function update(array $params): null 
     {
         $id = $params['id'] ?? '';
 

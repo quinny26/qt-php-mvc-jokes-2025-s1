@@ -377,10 +377,10 @@ VALUES (1, 'Skeleton Fight',
         '&lt;p&gt;I was going to tell a joke about a broken pencil, but it was pointless.&lt;/p&gt;',
         11, 'puns,funny', 100, now(), null),
        (5, 'Light Sleeper',
-        '&lt;p&gt;I told my wife she should stop sleeping in the fridge.&lt;/p&gt;&lt;p&gt;She said she\'s just a light sleeper.&lt;/p&gt;',
+        '&lt;p&gt;I told my wife she should stop sleeping in the fridge.&lt;/p&gt;&lt;p&gt;She said she is just a light sleeper.&lt;/p&gt;',
         11, 'sleep,puns', 101, now(), null),
        (6, 'Elevator Business',
-        '&lt;p&gt;I\'m thinking of starting a business installing elevators.&lt;/p&gt;&lt;p&gt;I hear it has its ups and downs.&lt;/p&gt;',
+        '&lt;p&gt;I am thinking of starting a business installing elevators.&lt;/p&gt;&lt;p&gt;I hear it has its ups and downs.&lt;/p&gt;',
         11, 'work,puns', 102, now(), null);
 
 -- ====================================> END SECTION <=========================================
