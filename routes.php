@@ -22,15 +22,22 @@ $router->get('contact', 'StaticPageController@contact');
 
 //Jokes pages
 $router->get('/jokes', 'JokeController@index');
+
+
+$router->get('/jokes/create', 'JokeController@create', ['auth']);
+$router->get('/jokes/edit/{id}', 'JokeController@edit', ['auth']);
+$router->post('/jokes', 'JokeController@store', ['auth']);
 $router->get('/jokes/search', 'JokeController@search');
 $router->get('/jokes/{id}', 'JokeController@show');
 
+$router->put('/jokes/{id}', 'JokeController@update', ['auth']);
+$router->delete('/jokes/{id}', 'JokeController@destroy', ['auth']);
 
 $router->get('/dashboard', 'HomeController@dashboard');
 
 //Edit page for users
-$router->get('/users/{id}/edit', 'UserController@edit');
-$router->put('/users/{id}', 'UserController@update');
+$router->get('/users/{id}/edit', 'UserController@edit', ['auth']);
+$router->put('/users/{id}', 'UserController@update',['auth']);
 
 $router->get('/auth/register', 'UserController@create', ['guest']);
 $router->get('/auth/login', 'UserController@login', ['guest']);

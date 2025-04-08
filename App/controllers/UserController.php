@@ -192,7 +192,7 @@ class UserController
             'country'=>$country
         ]);
 
-        redirect('/');
+        redirect('/dashboard');
     }
 
     //Taken from ProductController in products
