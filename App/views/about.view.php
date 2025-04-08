@@ -1,8 +1,10 @@
 <?php
 /**
- * Home Page View
+ * About Page View
  *
  * Filename:        home.view.php
+ * File comments/description:  This view is the about view, stating the details of the project and about the developer. 
+ * Code taken from the original home.view.php and modified
  * Location:        /App/views
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025

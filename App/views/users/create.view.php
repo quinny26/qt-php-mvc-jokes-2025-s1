@@ -3,6 +3,7 @@
  * Register User View
  *
  * Filename:        create.view.php
+ * File comment/description: This view provide the unregsitered user to register for an account
  * Location:        App/views/users
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025

@@ -1,8 +1,10 @@
 <?php
 /**
- * Register User View
+ * Edit Page View (Users)
  *
  * Filename:        create.view.php
+ * File comment/description: This view provide the resgistered users to edit their details once logged in. 
+ * Code for this view was taken from the create.view.php from users and the products.view.php
  * Location:        App/views/users
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025
@@ -11,7 +13,6 @@
  *
  */
 
- ///Taken from create.view.php
 loadPartial('header');
 loadPartial('navigation'); ?>
 
@@ -98,7 +99,6 @@ loadPartial('navigation'); ?>
                         class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"/>
                 </section>
 
-                <!-- From edit.view.php in products -->
                 <div class="grid grid-cols-4 gap-8">
                         <button type="submit"
                                 class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2

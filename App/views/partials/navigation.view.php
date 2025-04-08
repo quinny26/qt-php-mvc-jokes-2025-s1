@@ -3,6 +3,7 @@
  * Page 'Header' and Navigation
  *
  * Filename:        navigation.view.php
+ * File comment/description: This file shows the menu of the site.
  * Location:        App/views/partials
  * Project:         SaaS-FED-Notes
  * Date Created:    5/4/2025
@@ -59,21 +60,6 @@ $authenticated = new Authorise();
             if ($authenticated->isAuthenticated()) {
                 ?>
                 <li>
-                    <a href="/dashboard"
-                       class="pb-2 px-1 text-gray-400 hover:text-gray-300
-                     border-0 border-b-2 hover:border-b-gray-500
-                     transition ease-in-out duration-500">
-                        Dashboard
-                    </a>
-                </li>
-                <?php
-            }
-            ?>
-
-            <?php
-            if ($authenticated->isAuthenticated()) {
-                ?>
-                <li>
                     <a href="/jokes"
                        class="pb-2 px-1 text-gray-400 hover:text-gray-300
                      border-0 border-b-2 hover:border-b-gray-500
@@ -123,7 +109,14 @@ $authenticated = new Authorise();
                 </li>
                 <?php
             } else {
+                $userPreferredName = $_SESSION['user']['prefer_name'] ?? 'User';
                 ?>
+                 <li>
+                    <span class="pb-2 px-1 text-sm text-white-400">
+                        Welcome <?= htmlspecialchars($userPreferredName) ?>
+                    </span>
+                </li>
+
                 <li>
                     <form method="POST" action="/auth/logout" class="">
                         <button class="pb-2 px-1 text-sm text-gray-400 hover:text-gray-300

@@ -66,9 +66,9 @@ class UserController
         loadView('users/create');
     }
 
-    // Need help with debugging validation error(ChatGPT): https://chatgpt.com/share/67ed2334-cda0-8012-b85c-c0c7381e2817
     /**
      * Store user in database
+     * Need help with debugging validation error(ChatGPT): https://chatgpt.com/share/67ed2334-cda0-8012-b85c-c0c7381e2817
      *
      * @return void
      */
@@ -192,12 +192,12 @@ class UserController
             'country'=>$country
         ]);
 
-        redirect('/dashboard');
+        redirect('/home');
     }
 
-    //Taken from ProductController in products
      /**
      * Show the user edit form
+     * Taken from ProductController in products
      *
      * @param array $params
      * @return null
@@ -228,6 +228,7 @@ class UserController
 
     /**
      * Update a user
+     * Taken from ProductController in products
      *
      * @param array $params
      * @return null
@@ -384,6 +385,6 @@ class UserController
             'country' => $user->country
         ]);
 
-        redirect('/dashboard');
+        redirect('/home');
     }
 }

@@ -1,12 +1,11 @@
 <?php
 /**
- * FILE TITLE GOES HERE
+ * Index View File for Jokes
  *
- * DESCRIPTION OF THE PURPOSE AND USE OF THE CODE
- * MAY BE MORE THAN ONE LINE LONG
- * KEEP LINE LENGTH TO NO MORE THAN 96 CHARACTERS
  *
  * Filename:        index.view.php
+ * File comment/description: This file show all the jokes and any jokes that matched the keyword in during search. 
+ * Code taken from index.view.php in Products.
  * Location:        ${FILE_LOCATION}
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025

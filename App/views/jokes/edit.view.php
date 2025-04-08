@@ -1,12 +1,10 @@
 <?php
 /**
- * FILE TITLE GOES HERE
- *
- * DESCRIPTION OF THE PURPOSE AND USE OF THE CODE
- * MAY BE MORE THAN ONE LINE LONG
- * KEEP LINE LENGTH TO NO MORE THAN 96 CHARACTERS
+ * Edit View File
  *
  * Filename:        index.view.php
+ * File comment/description: This file show the edit page where resgitered can edit their jokes when logged in. 
+ * Code was taken from edit.view.php from products and modified
  * Location:        ${FILE_LOCATION}
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025

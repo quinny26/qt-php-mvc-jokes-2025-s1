@@ -1,12 +1,10 @@
 <?php
 /**
- * FILE TITLE GOES HERE
- *
- * DESCRIPTION OF THE PURPOSE AND USE OF THE CODE
- * MAY BE MORE THAN ONE LINE LONG
- * KEEP LINE LENGTH TO NO MORE THAN 96 CHARACTERS
+ * Create View File
  *
  * Filename:        index.view.php
+ * File comment/description: This file show the page where resgitered users can craete their joke. 
+ * Code was taken from create.view.php from Products
  * Location:        ${FILE_LOCATION}
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025

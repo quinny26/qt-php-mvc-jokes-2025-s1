@@ -2,8 +2,10 @@
 /**
  * Joke Controller
  *
- *
  * Filename:        Joke Controller.php
+ * File comment/description: This file contain public functions that allow the users to perform BREAD, 
+ * search and store date into the database from the user interface. 
+ * Code was taken from multple sources: ProductController, TraversyMedia and ClaudeAI with links embedded into the comments under
  * Location:        App/Controllers
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025
@@ -34,8 +36,8 @@ class JokeController
     }
 
    /**
-    * https://claude.ai/share/9626598f-5fac-49c8-a1fc-a3bf12004811
      * Produce home page
+     * Debugging from Claude AI: https://claude.ai/share/9626598f-5fac-49c8-a1fc-a3bf12004811
      *
      * @return void
      * @throws \Exception
@@ -64,7 +66,6 @@ class JokeController
         ]);
     }
 
-    //    /**
     //  * Show the create joke form
     //  *
     //  * @return void
@@ -84,6 +85,7 @@ class JokeController
 
      /**
      * Search jokes by keywords
+     * Taken from ProductController
      *
      * @return void
      * @throws \Exception
@@ -163,8 +165,9 @@ class JokeController
     }
 
     /**
-     * https://claude.ai/share/7797d962-995e-41ad-836e-a9b142123671
+     * 
      * Store data in database
+     * Taken from ProductController and debugging from Claude AI: https://claude.ai/share/7797d962-995e-41ad-836e-a9b142123671
      *
      * @return void
      * @throws \Exception
@@ -179,10 +182,6 @@ class JokeController
 
     // Add author_id from session
     $newJokeData['author_id'] = Session::get('user')['id'];
-    
-    // Add timestamps
-    // $newJokeData['created_at'] = date('Y-m-d H:i:s');
-    // $newJokeData['updated_at'] = date('Y-m-d H:i:s');
 
     // Sanitize all data
     $newJokeData = array_map('sanitize', $newJokeData);
@@ -240,6 +239,7 @@ class JokeController
 
     /**
      * Show the joke edit form
+     * Taken from ProductController
      *
      * @param array $params
      * @return null
@@ -292,6 +292,7 @@ class JokeController
 
     /**
      * Update a joke
+     * Taken from ProductController
      *
      * @param array $params
      * @return null
@@ -360,7 +361,7 @@ class JokeController
             $updateValues['body'] = $markdown;
         }
 
-        //https://claude.ai/share/212a6db8-31c2-47d2-bc07-afb74c280d71
+        //Debugging from Claude AI : https://claude.ai/share/212a6db8-31c2-47d2-bc07-afb74c280d71
         $updateValues['updated_at'] = date('Y-m-d H:i:s') ?? '';
 
         // Submit to database
@@ -377,7 +378,7 @@ class JokeController
         $updateValues['updated_at'] = date('Y-m-d H:i:s') ?? '';
 
 
-        //https://claude.ai/share/7b888cb5-649a-4d3a-99d6-cc93601f1a7f
+        //Debugging from Claude AI: https://claude.ai/share/7b888cb5-649a-4d3a-99d6-cc93601f1a7f
         $updateValues['id'] = $id; // Add this line before executing the query
         $this->db->query($updateQuery, $updateValues);
 
@@ -389,8 +390,9 @@ class JokeController
     }
 
 /** 
- * https://www.traversymedia.com/php-from-scratch
-  * delete a joke
+ * 
+  * Delete a joke
+  * Code taken from Traversy Media: PHP From Scratch Course: https://www.traversymedia.com/php-from-scratch
   *
   * @param array $params 
   * @return void 

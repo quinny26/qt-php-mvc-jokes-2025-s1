@@ -1,8 +1,10 @@
 <?php
 /**
- * Home Page View
+ * Contact Page View
  *
  * Filename:        home.view.php
+ * File comment/description:  * This view is a static page and is not a working contact page. 
+ * Taken from the TailwindCSS website: https://tailwindcss.com/plus/ui-blocks/marketing/sections/contact-sections
  * Location:        /App/views
  * Project:         SaaS-Vanilla-MVC
  * Date Created:    5/4/2025
@@ -11,7 +13,6 @@
  *
  */
 
-///Code from https://tailwindcss.com/plus/ui-blocks/marketing/sections/contact-sections
 loadPartial('header');
 loadPartial('navigation');
 
