@@ -35,7 +35,7 @@ loadPartial('navigation'); ?>
                     <input type="text" id="GivenName"
                            name="given_name" placeholder="Given Name"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user-> given_name ?? '' ?>" required/>
+                           value="<?= $user-> given_name ?? '' ?>"/>
                 </section>
 
                 <section class="mb-4">
@@ -51,7 +51,7 @@ loadPartial('navigation'); ?>
                     <input type="text" id="PreferredName"
                            name="prefer_name" placeholder="Preferred Name"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user->prefer_name ?? '' ?>" required/>
+                           value="<?= !empty($user->prefer_name) ? $user->prefer_name : $user->given_name ?>"/>
                 </section>
 
                 <section class="mb-4">
@@ -59,7 +59,7 @@ loadPartial('navigation'); ?>
                     <input type="email" id="Email"
                            name="email" placeholder="Email Address"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user->email ?? '' ?>" required/>
+                           value="<?= $user->email ?? '' ?>"/>
                 </section>
 
                 <section class="mb-4">
@@ -67,7 +67,7 @@ loadPartial('navigation'); ?>
                     <input type="text" id="City"
                            name="city" placeholder="City"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user->city ?? '' ?>" required/>
+                           value="<?= $user->city ?? '' ?>"/>
                 </section>
 
                 <section class="mb-4">
@@ -75,7 +75,7 @@ loadPartial('navigation'); ?>
                     <input type="text" id="State"
                            name="state" placeholder="State"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user->state ?? '' ?>" required/>
+                           value="<?= $user->state ?? '' ?>"/>
                 </section>
 
                 <section class="mb-4">
@@ -83,7 +83,7 @@ loadPartial('navigation'); ?>
                     <input type="text" id="Country"
                            name="country" placeholder="Country"
                            class="w-full px-4 py-2 border border-b-zinc-300 rounded focus:outline-none"
-                           value="<?= $user->country ?? '' ?>" required/>
+                           value="<?= $user->country ?? '' ?>"/>
                 </section>
 
                 <section class="mb-4">

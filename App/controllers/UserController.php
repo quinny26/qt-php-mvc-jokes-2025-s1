@@ -76,7 +76,7 @@ class UserController
     {
         $given_name = $_POST['given_name'] ?? '';
         $family_name = $_POST['family_name'] ?? '';
-        $prefer_name = $_POST['prefer_name'] ?? $given_name;
+        $prefer_name = !empty($_POST['prefer_name']) ? $_POST['prefer_name'] : $_POST['given_name'];
 
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -257,7 +257,7 @@ class UserController
 
         $updateValues = array_map('sanitize', $updateValues);
 
-        $requiredFields = ['given_name', 'prefer_name', 'city', 'state', 'country', 'email', 'password'];
+        $requiredFields = ['given_name', 'city', 'state', 'country', 'email', 'password'];
 
         $errors = [];
 

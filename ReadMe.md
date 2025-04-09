@@ -174,7 +174,7 @@ TODO: More details on use for use in developing basic application using this cod
 
 ## Contact
 
-Adrian Gould - 20026235@tafe.wa.edu.au
+Quinny Trang - 20026235@tafe.wa.edu.au
 
 Project Link: https://github.com/quinny26/qt-php-mvc-jokes-2025-s1
 
