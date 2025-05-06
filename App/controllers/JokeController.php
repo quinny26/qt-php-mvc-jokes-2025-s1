@@ -52,6 +52,7 @@ class JokeController
         jokes.author_id, 
         users.id AS user_id,  
         users.prefer_name AS user_prefer_name,
+        users.given_name AS user_prefer_name,
         categories.name AS category_name
         FROM jokes  
         LEFT JOIN categories ON jokes.category_id = categories.id
@@ -103,6 +104,7 @@ class JokeController
         jokes.author_id, 
         users.id AS user_id,  
         users.prefer_name AS user_prefer_name,
+        users.given_name AS user_given_name,
         categories.name AS category_name
         FROM jokes 
         LEFT JOIN users ON jokes.author_id = users.id
@@ -145,6 +147,7 @@ class JokeController
         jokes.author_id, 
         users.id AS user_id,  
         users.prefer_name AS user_prefer_name,
+        users.given_name AS user_given_name,
         categories.name AS category_name
         FROM jokes 
         LEFT JOIN users ON jokes.author_id = users.id
@@ -213,12 +216,24 @@ class JokeController
         return;
     }
 
-    // Process the body field if markdown conversion is needed
-    if (isset($newJokeData['body'])) {
-        $body = $newJokeData['body'];
-        $markdown = htmlToMarkdown($body);
-        $newJokeData['body'] = $markdown;
+    // Process the field if markdown conversion is needed
+    // if (isset($newJokeData['body'])) {
+    //     $body = $newJokeData['body'];
+    //     $markdown = htmlToMarkdown($body);
+    //     $newJokeData['body'] = $markdown;
+    // }
+
+    foreach ($allowedFields as $markDownfield) {
+        if (isset($newJokeData[$markDownfield])) {
+            $newJokeData[$markDownfield] = htmlToMarkdown($newJokeData[$markDownfield]);
+        }
     }
+
+    // foreach ($allowedFields as $specialCharsfield) {
+    //     if (isset($newJokeData[$specialCharsfield])) {
+    //         $newJokeData[$specialCharsfield] = htmlspecialchars($newJokeData[$specialCharsfield]);
+    //     }
+    // }
 
     // Build the SQL query
     $fields = array_keys($newJokeData);
@@ -262,6 +277,7 @@ class JokeController
         jokes.author_id, 
         users.id AS user_id,  
         users.prefer_name AS user_prefer_name,
+        users.given_name AS user_given_name,
         categories.name AS category_name
         FROM jokes 
         LEFT JOIN users ON jokes.author_id = users.id
@@ -414,6 +430,7 @@ class JokeController
         jokes.author_id, 
         users.id AS user_id,  
         users.prefer_name AS user_prefer_name,
+        users.given_name AS user_given_name,
         categories.name AS category_name
         FROM jokes 
         LEFT JOIN users ON jokes.author_id = users.id

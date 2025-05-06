@@ -72,7 +72,7 @@ class StaticPageController
         $jokeCount = 0;
         $userCount = 0;
             if ($isAuthenticated) {
-                $jokeCount = $this->db->query('SELECT count(id) as total FROM products ') ->fetch();
+                $jokeCount = $this->db->query('SELECT count(id) as total FROM jokes ') ->fetch();
                 $userCount = $this->db->query('SELECT count(id) as total FROM users') ->fetch();
             }
 

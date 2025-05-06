@@ -109,7 +109,9 @@ $authenticated = new Authorise();
                 </li>
                 <?php
             } else {
-                $userPreferredName = $_SESSION['user']['prefer_name'] ?? 'User';
+                $userPreferredName = !empty($_SESSION['user']['prefer_name']) ? $_SESSION['user']['prefer_name'] : (!empty($_SESSION['user']['given_name']) ? 
+                    $_SESSION['user']['given_name'] : 
+                    'User');
                 ?>
                  <li>
                     <span class="pb-2 px-1 text-sm text-white-400">

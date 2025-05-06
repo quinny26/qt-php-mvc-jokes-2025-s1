@@ -40,6 +40,12 @@ loadPartial('navigation');
             <?= loadPartial('message') ?>
         </section>
 
+        <?php if(empty($jokes)): ?>
+            <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded">
+                <p>No jokes are currently available in the database. Check back later!</p>
+            </div>
+        <?php else: ?>
+
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
             <?php
             foreach ($jokes ?? [] as $joke):
@@ -66,7 +72,8 @@ loadPartial('navigation');
 
                     <section class="flex-grow p-4 ">
                         <div class="bg-white">
-                            Author: <?= $joke->user_prefer_name ?? 'Unknown' ?>
+                            Author: <?= $displayName = !empty($joke->user_prefer_name) ? $joke->user_prefer_name : 
+              (!empty($joke->user_given_name) ? $joke->user_given_name : 'Unknown');?>
                         </div>
                     </section>
 
@@ -82,6 +89,8 @@ loadPartial('navigation');
             endforeach
             ?>
         </section>
+
+        <?php endif;?>
 
     </article>
 </main>

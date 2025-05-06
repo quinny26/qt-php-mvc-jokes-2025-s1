@@ -72,7 +72,9 @@ loadPartial('navigation');
                     Author
                 </h5>
                 <section class="col-span-1 md:col-span-3  max-w-96 description mt-4">
-                    <?= $joke->user_prefer_name ?>
+                <?= $displayName = !empty($joke->user_prefer_name) ? $joke->user_prefer_name : 
+              (!empty($joke->user_given_name) ? $joke->user_given_name : 'Unknown');?>
+
                 </section>
             </section>
 
