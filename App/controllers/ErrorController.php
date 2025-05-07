@@ -1,10 +1,8 @@
 <?php
 /**
- * FILE TITLE GOES HERE
+ * Error Controller 
  *
- * DESCRIPTION OF THE PURPOSE AND USE OF THE CODE
- * MAY BE MORE THAN ONE LINE LONG
- * KEEP LINE LENGTH TO NO MORE THAN 96 CHARACTERS
+ * This file handle the error when a page cannot be found or unathorised access error
  *
  * Filename:        ErrorController.php
  * Location:

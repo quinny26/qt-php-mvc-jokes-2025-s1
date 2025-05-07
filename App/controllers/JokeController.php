@@ -125,6 +125,7 @@ class JokeController
 
      /**
      * Show a single joke
+     * Taken from ProductController
      *
      * @param array $params
      * @return void
